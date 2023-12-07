@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="NumeroTarjetaValido">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTarjeta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NumeroTarjetaValidoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTarjetaValidoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerLlaveIV">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerLlaveIVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerLlaveIVResult" type="tns:ResponseObtenerLLave" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResponseObtenerLLave">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="IV" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Hashing">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroTarjeta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HashingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HashingResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncriptarTarjeta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Tarjeta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="llave" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="IV" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncriptarTarjetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncriptarTarjetaResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesencriptarTarjeta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Tarjeta" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="llave" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="IV" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesencriptarTarjetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DesencriptarTarjetaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NumeroTarjetaValidoSoapIn">
+    <wsdl:part name="parameters" element="tns:NumeroTarjetaValido" />
+  </wsdl:message>
+  <wsdl:message name="NumeroTarjetaValidoSoapOut">
+    <wsdl:part name="parameters" element="tns:NumeroTarjetaValidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerLlaveIVSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerLlaveIV" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerLlaveIVSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerLlaveIVResponse" />
+  </wsdl:message>
+  <wsdl:message name="HashingSoapIn">
+    <wsdl:part name="parameters" element="tns:Hashing" />
+  </wsdl:message>
+  <wsdl:message name="HashingSoapOut">
+    <wsdl:part name="parameters" element="tns:HashingResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncriptarTarjetaSoapIn">
+    <wsdl:part name="parameters" element="tns:EncriptarTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="EncriptarTarjetaSoapOut">
+    <wsdl:part name="parameters" element="tns:EncriptarTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DesencriptarTarjetaSoapIn">
+    <wsdl:part name="parameters" element="tns:DesencriptarTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="DesencriptarTarjetaSoapOut">
+    <wsdl:part name="parameters" element="tns:DesencriptarTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TarjetasSoap">
+    <wsdl:operation name="NumeroTarjetaValido">
+      <wsdl:input message="tns:NumeroTarjetaValidoSoapIn" />
+      <wsdl:output message="tns:NumeroTarjetaValidoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLlaveIV">
+      <wsdl:input message="tns:ObtenerLlaveIVSoapIn" />
+      <wsdl:output message="tns:ObtenerLlaveIVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hashing">
+      <wsdl:input message="tns:HashingSoapIn" />
+      <wsdl:output message="tns:HashingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncriptarTarjeta">
+      <wsdl:input message="tns:EncriptarTarjetaSoapIn" />
+      <wsdl:output message="tns:EncriptarTarjetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DesencriptarTarjeta">
+      <wsdl:input message="tns:DesencriptarTarjetaSoapIn" />
+      <wsdl:output message="tns:DesencriptarTarjetaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TarjetasSoap" type="tns:TarjetasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NumeroTarjetaValido">
+      <soap:operation soapAction="http://tempuri.org/NumeroTarjetaValido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLlaveIV">
+      <soap:operation soapAction="http://tempuri.org/ObtenerLlaveIV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hashing">
+      <soap:operation soapAction="http://tempuri.org/Hashing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncriptarTarjeta">
+      <soap:operation soapAction="http://tempuri.org/EncriptarTarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesencriptarTarjeta">
+      <soap:operation soapAction="http://tempuri.org/DesencriptarTarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TarjetasSoap12" type="tns:TarjetasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NumeroTarjetaValido">
+      <soap12:operation soapAction="http://tempuri.org/NumeroTarjetaValido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLlaveIV">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerLlaveIV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hashing">
+      <soap12:operation soapAction="http://tempuri.org/Hashing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncriptarTarjeta">
+      <soap12:operation soapAction="http://tempuri.org/EncriptarTarjeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesencriptarTarjeta">
+      <soap12:operation soapAction="http://tempuri.org/DesencriptarTarjeta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tarjetas">
+    <wsdl:port name="TarjetasSoap" binding="tns:TarjetasSoap">
+      <soap:address location="http://localhost:56909/Tarjetas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TarjetasSoap12" binding="tns:TarjetasSoap12">
+      <soap12:address location="http://localhost:56909/Tarjetas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33529.398
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Infraestructura", "3.Infraestructura", "{3F2F2FB1-7FE5-4B1A-A6C3-53428C61C015}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Servicio", "1.Servicio", "{7A9307A3-F30E-4888-96E8-9ACF58557780}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Dominio", "2.Dominio", "{8B163759-0CA1-481D-A3AA-3542C0E075E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguridad", "Seguridad\Seguridad.csproj", "{D20F1616-7415-48F4-BF90-E57D05DC6B9B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Aplicacion", "0.Aplicacion", "{5781303D-F763-4739-8574-728F7187AF74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoTarea", "ProyectoTarea\ProyectoTarea.csproj", "{15C2BE37-24AD-460B-8A38-78F1C74A9E9F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{436C31BD-C016-46A0-B2A2-F31E585787B3} = {436C31BD-C016-46A0-B2A2-F31E585787B3}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "webTarea", "webTarea", "{436C31BD-C016-46A0-B2A2-F31E585787B3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{d20f1616-7415-48f4-bf90-e57d05dc6b9b}|Seguridad.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56909"
+		Debug.AspNetCompiler.PhysicalPath = "webTarea\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56909\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56909"
+		Release.AspNetCompiler.PhysicalPath = "webTarea\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56909\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56909"
+		SlnRelativePath = "webTarea\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D20F1616-7415-48F4-BF90-E57D05DC6B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20F1616-7415-48F4-BF90-E57D05DC6B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20F1616-7415-48F4-BF90-E57D05DC6B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20F1616-7415-48F4-BF90-E57D05DC6B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15C2BE37-24AD-460B-8A38-78F1C74A9E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C2BE37-24AD-460B-8A38-78F1C74A9E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C2BE37-24AD-460B-8A38-78F1C74A9E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C2BE37-24AD-460B-8A38-78F1C74A9E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{436C31BD-C016-46A0-B2A2-F31E585787B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436C31BD-C016-46A0-B2A2-F31E585787B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436C31BD-C016-46A0-B2A2-F31E585787B3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{436C31BD-C016-46A0-B2A2-F31E585787B3}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D20F1616-7415-48F4-BF90-E57D05DC6B9B} = {3F2F2FB1-7FE5-4B1A-A6C3-53428C61C015}
+		{15C2BE37-24AD-460B-8A38-78F1C74A9E9F} = {5781303D-F763-4739-8574-728F7187AF74}
+		{436C31BD-C016-46A0-B2A2-F31E585787B3} = {7A9307A3-F30E-4888-96E8-9ACF58557780}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58DCACED-2ADC-4D3D-8709-83C0CAC21D6A}
+	EndGlobalSection
+EndGlobal

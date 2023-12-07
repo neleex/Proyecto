@@ -1,0 +1,6 @@
+C:\Temp\Tarea\Tarea\Seguridad\bin\Debug\Seguridad.dll
+C:\Temp\Tarea\Tarea\Seguridad\bin\Debug\Seguridad.pdb
+C:\Temp\Tarea\Tarea\Seguridad\obj\Debug\Seguridad.csprojAssemblyReference.cache
+C:\Temp\Tarea\Tarea\Seguridad\obj\Debug\Seguridad.csproj.CoreCompileInputs.cache
+C:\Temp\Tarea\Tarea\Seguridad\obj\Debug\Seguridad.dll
+C:\Temp\Tarea\Tarea\Seguridad\obj\Debug\Seguridad.pdb

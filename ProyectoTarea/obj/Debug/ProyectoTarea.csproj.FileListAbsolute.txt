@@ -1,0 +1,10 @@
+C:\Temp\Tarea\Tarea\ProyectoTarea\bin\Debug\ProyectoTarea.exe
+C:\Temp\Tarea\Tarea\ProyectoTarea\bin\Debug\ProyectoTarea.pdb
+C:\Temp\Tarea\Tarea\ProyectoTarea\obj\Debug\ProyectoTarea.csprojAssemblyReference.cache
+C:\Temp\Tarea\Tarea\ProyectoTarea\obj\Debug\ProyectoTarea.frmTarea.resources
+C:\Temp\Tarea\Tarea\ProyectoTarea\obj\Debug\ProyectoTarea.Properties.Resources.resources
+C:\Temp\Tarea\Tarea\ProyectoTarea\obj\Debug\ProyectoTarea.csproj.GenerateResource.cache
+C:\Temp\Tarea\Tarea\ProyectoTarea\obj\Debug\ProyectoTarea.csproj.CoreCompileInputs.cache
+C:\Temp\Tarea\Tarea\ProyectoTarea\obj\Debug\ProyectoTarea.exe
+C:\Temp\Tarea\Tarea\ProyectoTarea\obj\Debug\ProyectoTarea.pdb
+C:\Temp\Tarea\Tarea\ProyectoTarea\bin\Debug\ProyectoTarea.exe.config
